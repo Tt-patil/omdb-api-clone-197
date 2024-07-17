@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMDB API Clone</title>
+  <link rel="stylesheet" href="omdb.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="links-container">
+        <!-- Brand and navigation links -->
+        <a href="#" class="brand">OMDB API </a>
+        <a href="#">Usage</a>
+        <a href="#">Parameters</a>
+        <a href="#">Examples</a>
+        <a href="#">Change Log</a>
+      </div>
+
+      <div class="buttons">
+        <!-- Action buttons -->
+        <button class="button">Become a Patron</button>
+        <button class="button button-donate">Donate</button>
+        <button class="button button-contact">Contact</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Content for main section -->
+    <div class="hero-section-container">
+      <div class="hero-section margin-bottom">
+        <div class="hero-child">
+          <h1 class="x-large-font">OMDB API</h1>
+          <h2>Open Movie Database</h3>
+            <p>
+              The OMDB API is RESTFULL web service to obtain movie information
+              All content and images on the site are contributed and maintained
+              by our users
+            </p>
+            <p>
+              If you find the service useful, please consider making
+              <a class="links" href="">one time donation</a>, or
+              <a class="links" href="">become a patron</a>.
+            </p>
+        </div>
+      
+        
+        <div class="hero-child poster-child">
+          <div class="poster"></div>
+          <div class="info">
+            <h1>Poster API</h1>
+            <p>The poster api is only available to patrons.</p>
+            <p>
+              Currently, over 280,000 posters updated daily with resolution up
+              to 2000x3000.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+
+      <!-- removable attention box  -->
+      <div class="attention margin-bottom">
+        <span class="close-button"><button class="close_button">x</button></span>
+        <h2>Attention users</h2>
+        <p>04/08/19 - Addes support for eight digit IMDb IDs.</p>
+        <p>01/20/19 - Supressed adult content frm search results.</p>
+        <p>01/20/19 - Addes Swagger files ( <a href="">YAML</a>,<a href="">JSON</a>) to expose current API abilities and
+          upcoming REST functions.</p>
+        <button class="become-patron">
+          <h3>Become a Patron</h2>
+        </button>
+      </div>
+
+      <!-- sponsers section-->
+      <div class="sponsers-container">
+        <div class="sponsors-heading">
+          <h3>Sponsers</h3>
+        </div>
+        <div class="sponsers">
+          <a class="links" href="https://www.tract.com/">tract</a>,
+          <a class="links" href="https://emby.media/">Emby</a>,
+          <a class="links" href="https://www.filebot.net/">fileBot</a>,
+          <a class="links" href="https://www.xirvik.com/">xirvik servers</a>,
+          <a class="links" href="https://edu.mitv.com/">edu mi tv</a>,
+          <a class="links" href="https://couchpop.com/">Couch pop</a>,
+          <a class="links" href="https://edu.rever.com/">edu rever</a>,
+          <a class="links" href="https://boxscripts.com/">box scripts</a>,
+          <a class="links" href="https://medium.com/onscreen">on screen medium com</a>,
+          <a class="links" href="https://ramotion.com/">ramotion com</a>,
+          <a class="links" href="https://www.phonetrackers.com/">phone trackers classics on dvd streaming app</a>,
+          <a class="links" href="https://howtomakeanfintechapp.com/">how to make an fintech app Wid 2</a>,
+          <a class="links" href="https://createmovielistwithai.com/">create movie list with ai pop flick custom
+            couch</a>
+        </div>
+      </div>
+<!-- usage section -->
+      <div class="usage">
+        <h1 class="usage-heading">Usage</h1>
+        <hr>
+        <p>Send all data request to:</p>
+        <div class="usage-child">
+          <p>http://www.omdbapi.com/?apikey=[yourkey]&</p>
+        </div>
+        <p>Poster API requests:</p>
+        <div class="usage-child">
+          <p>http://img.omdbapi.com/?apikey=[yourkey]&</p>
+        </div>
+      </div>
+ <!-- parameter section -->
+      <div class="parameters">
+        <h1 class="parameter-heading">Parameters</h1>
+        <hr>
+        <h3>By ID or Title</h3>
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Valid Options</th>
+            <th>Default Value</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>i</td>
+            <td class="optional"><button>Optional*</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>A valid IMDb ID (e.g. tt1285016)</td>
+          </tr>
+          <tr>
+            <td>t</td>
+            <td class="optional"><button>Optional*</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>Movie title to search for.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td><button style="border:none;">no</button></td>
+            <td>movie, series, episode</td>
+            <td>&lt;empty&gt;</td>
+            <td>Type of result to return.</td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td><button style="border:none;">no</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>Year of release.</td>
+          </tr>
+          <tr>
+            <td>plot</td>
+            <td><button style="border:none;">no</button></td>
+            <td>short, full</td>
+            <td>short</td>
+            <td>Return short or full plot.</td>
+          </tr>
+          <tr>
+            <td>r</td>
+            <td><button style="border:none;">no</button></td>
+            <td>json, xml</td>
+            <td>json</td>
+            <td>The data type to return.</td>
+          </tr>
+          <tr>
+            <td>callback</td>
+            <td><button style="border:none;">no</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>JSONP callback name.</td>
+          </tr>
+          <tr>
+            <td>v</td>
+            <td><button style="border:none;">no</button></td>
+            <td></td>
+            <td>1</td>
+            <td>API version (reserved for future use).</td>
+          </tr>
+        </table>
+        <p>*Please note while both "i" and "t" are optional at least one argument is required.</p>
+
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Required</th>
+            <th>Valid Options</th>
+            <th>Default Value</th>
+            <th>Description</th>
+          </tr>
+
+          <tr>
+            <td>yes</td>
+            <td><button style="background-color: rgb(112, 176, 47); border:none; color:white">yes</button></td>
+            <td>&lt;empty&gt;</td>
+            <td>&lt;empty&gt;</td>
+            <td>Movie title to search for.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td><button style="border:none;">no</button></td>
+            <td>movie, series, episode</td>
+            <td>&lt;empty&gt;</td>
+            <td>Type of result to return.</td>
+          </tr>
+          <tr>
+            <td>y</td>
+            <td><button style="border:none;">no</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>Year of release.</td>
+          </tr>
+          <tr>
+            <td>r</td>
+            <td><button style="border:none;">no</button></td>
+            <td>json, xml</td>
+            <td>json</td>
+            <td>The data type to return.</td>
+          </tr>
+          <tr>
+            <td>page <button style="border:none; color:white; background-color:rgb(32, 160, 196);">new!</button></td>
+            <td><button style="border:none;">no</button></td>
+            <td>1-100</td>
+            <td>1</td>
+            <td>page number to return.</td>
+          </tr>
+          <tr>
+            <td>callback</td>
+            <td><button style="border:none;">no</button></td>
+            <td></td>
+            <td>&lt;empty&gt;</td>
+            <td>JSONP callback name.</td>
+          </tr>
+          <tr>
+            <td>v</td>
+            <td><button style="border:none;">no</button></td>
+            <td>&lt;empty&gt;</td>
+            <td>1</td>
+            <td>API version (reserved for future use).</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- exampples section  -->
+      <div class="examples ">
+        <h1 class="example-heading">Examples</h1>
+        <hr><br>
+        <div class="example-child">
+          <h3>By Title</h3>
+          <hr>
+          <form action="">
+            <label for="id">ID:</label>
+            <input type="text" placeholder="IMDb ID">
+
+            <label for="plot">Plot:</label>
+            <select name="plot" class="plot">
+              <option value="full">Full</option>
+              <option value="short">Short</option>
+            </select>
+
+            <label for="response">Response:</label>
+            <select name="cars" id="cars">
+              <option value="json">JSON</option>
+              <option value="xml">XML</option>
+            </select>
+
+            <button class="search-btn">Search</button>
+            <button class="reset-btn">Reset</button>
+          </form>
+        </div>
+
+        <div class="example-child">
+          <h3>By Title</h3>
+          <hr>
+          <form action="">
+            <label for="id">ID:</label>
+            <input type="text" placeholder="IMDb ID">
+
+            <label for="plot">Plot:</label>
+            <select name="plot" class="plot">
+              <option value="full">Full</option>
+              <option value="short">Short</option>
+            </select>
+
+            <label for="response">Response:</label>
+            <select name="cars" id="cars">
+              <option value="json">JSON</option>
+              <option value="xml">XML</option>
+            </select>
+
+            <button class="search-btn">Search</button>
+            <button class="reset-btn">Reset</button>
+          </form>
+        </div>  
+      </div>
+      <div class="change-log">
+        <h1 class="change-log-title">Change Log</h1>
+        <hr>
+        <ul>
+          <li>
+            11/02/17
+            <ul>
+              <li>FREE KEYS! The "open" API is finally open again!</li>
+            </ul>
+          </li>
+          <li>
+            08/20/17
+            <ul>
+              <li>I created a GitHub repository for tracking bugs.</li>
+            </ul>
+          </li>
+          <li>
+            05/10/17
+            <ul>
+              <li>Due to some security concerns on how the keys were being distributed I updated the form to email
+                them and also changed the algorithm used, which means your older keys not obtained through email will
+                eventually stop working.</li>
+            </ul>
+          </li>
+          <li>
+            01/12/17
+            <ul>
+              <li>Removed single character restriction from title/search results.</li>
+            </ul>
+          </li>
+          <li>
+            06/11/16
+            <ul>
+              <li>"totalSeasons" count has been added to series results.</li>
+            </ul>
+          </li>
+          <li>
+            1/20/16
+            <ul>
+              <li>To accommodate search paging "totalResults" is now returned at the root level.</li>
+            </ul>
+          </li>
+          <li>
+            12/12/15
+            <ul>
+              <li>Search pagination added: <a class="links"
+                  href="http://www.omdbapi.com/?s=Batman&page=2">http://www.omdbapi.com/?s=Batman&page=2</a></li>
+            </ul>
+          </li>
+          <li>
+            11/16/15
+            <ul>
+              <li>Season+Episode now works with "i" parameter: <a href="http://www.omdbapi.com/?i=tt0944947&Season=1"
+                  class="links">http://www.omdbapi.com/?i=tt0944947&Season=1</a></li>
+              <li>Fixed the max pool size connection issues.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            10/18/15
+            <ul>
+              <li>You can now return all episodes by using just the "Season" parameter: <a
+                  href="http://www.omdbapi.com/?t=Game of Thrones&Season=1"
+                  class="links">http://www.omdbapi.com/?t=Game of Thrones&Season=1</a></li>
+            </ul>
+          </li>
+          <li>
+            9/9/15
+            <ul>
+              <li>New server is up, response times should be < 500ms.</li>
+              <li>Setup a CDN/Caching service with CloudFlare</li>
+            </ul>
+          </li>
+          <li>
+            8/15/15
+            <ul>
+              <li>Created and Fixed a bad parsing error with JSON response. -Sorry about that!</li>
+              <li>HTTPS (with TLS) is now active: <a href="https://www.omdbapi.com/"
+                  class="links">https://www.omdbapi.com/</a></li>
+            </ul>
+          </li>
+          <li>
+            5/10/15
+            <ul>
+              <li>Season+Episode search parameters added: <a
+                  href="http://www.omdbapi.com/?t=Game of Thrones&Season=1&Episode=1"
+                  class="links">http://www.omdbapi.com/?t=Game of Thrones&Season=1&Episode=1</a></li>
+            </ul>
+          </li>
+          <li>
+            5/2/15
+            <ul>
+              <li>Poster API: Enabled client side caching.</li>
+              <li>Database normalization.</li>
+            </ul>
+          </li>
+          <li>
+            3/27/15
+            <ul>
+              <li>Corrected JSON/JSONP response types per RFC standards.</li>
+              <li>Changed Caching-control to Public.</li>
+            </ul>
+          </li>
+          <li>
+            3/15/15
+            <ul>
+              <li>Episodes will now return Season/Episode/SeriesID.</li>
+            </ul>
+          </li>
+          <li>
+            3/8/15
+            <ul>
+              <li>New caching system in place, response times should be much better.</li>
+              <li>Set a max limit of 20 concurrent connections, if you get 403 errors you may need to delay your
+                responses a bit.</li>
+            </ul>
+          </li>
+          <li>
+            2/15/15
+            <ul>
+              <li>Poster API: Now returns 404 error if poster not found.
+              </li>
+            </ul>
+
+          </li>
+          <li>
+            1/1/15
+            <ul>
+              <li>You can now search by type! (movie, series, episode etc.)</li>
+              <li>Dupes have been removed from database.</li>
+              <li>Poster API images updated.</li>
+            </ul>
+          </li>
+          <li>
+            11/1/14
+            <ul>
+              <li>New site layout!</li>
+              <li>Poster API still undergoing stress tests by donors.</li>
+              <li>Fixed some issues causing invalid JSON/XML due to non escaped quotes.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- imporatant links  -->
+      <div class="important-links">
+        <div class="important-links-child">
+          <a class="links" href="#">Legal</a>
+          <a class="links" href="#">Donate</a>
+        </div>
+        <a class="links" href="#">Back to top</a>
+      </div>
+<!-- license section  -->
+      <div class="license">
+        <p>API by <a href="#" class="links">Brian Fritz</a>.</p>
+        <p>All content licensed under <a href="#" class="links">CC BY-NC 4.0</a>.</p>
+        <p>This site is not endorsed by or affiliated with <a href="#" class="links">IMDb.com</a>.</p>
+
+      </div>
+    </div>
+  </main>
+
+<!-- close button  logic  -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const closeButton = document.querySelector(".close-button");
+      const attentionContainer = document.querySelector(".attention");
+
+      closeButton.addEventListener("click", function (e) {
+        attentionContainer.style.display = "none";
+
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>
