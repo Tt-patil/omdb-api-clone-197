@@ -1,0 +1,390 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background-color: rgb(254, 252, 252);
+  overflow-y: hidden;
+}
+
+
+
+.margin-bottom {
+  margin-bottom: 1%;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(46, 134, 207);
+}
+
+/* styling for navbar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 0 14px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar .brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .buttons {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-donate {
+  background-color: #f44336;
+}
+
+.button-contact {
+  background-color: #008cba;
+}
+
+.hero-section-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  border: 2px solid black;
+  height: 640px;
+  overflow-y: scroll;
+}
+
+/* hidding scrollbar */
+
+.hero-section-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* styling hero section */
+.hero-section {
+  width: 80%;
+  padding: 3%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.hero-child {
+  width: 45%;
+}
+
+
+.hero-child h2 {
+  color: rgb(164, 165, 169);
+}
+.x-large-font {
+  font-size: 3em;
+  margin-bottom: -10px;
+}
+.poster-child {
+  display: flex;
+  height: 280px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5px;
+  border: 2px solid #cfcfcf;
+  background-color: rgba(220, 220, 220, 0.769);
+}
+
+/* styling poster image */
+.poster {
+  height: 230px;
+  width: 180px;
+  border-radius: 5px;
+  background-image: url("raat jashandi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  width: 60%;
+  margin-top: -10%;
+  padding: 0%;
+  text-align: start;
+}
+
+/* styling sponsers container */
+.sponsers-container {
+  width: 86%;
+  height: 100px;
+  border: 2px solid rgb(121, 184, 26);
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: flex-between;
+}
+
+/* styling attention box */
+.attention{
+  color: white;
+  display: block;
+  width: 83%;
+  background-color: rgb(24, 207, 223);
+  padding: 0px 20px 10px 20px;
+}
+
+.attention a{
+  color: white;
+}
+
+.close-button{
+  float: right;
+  margin-top:15px;
+  
+}
+
+/* style close buttonn  */
+.close-button button{
+  background-color:rgb(24, 207, 223) ;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: rgb(218, 217, 217);
+  border: none;
+
+}
+
+.become-patron{
+  color: rgb(254, 247, 247);
+  background-color: rgb(218, 37, 37);
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border: 1.5px solid white;
+  
+}
+
+/* styling sponsers container  */
+.sponsors-heading {
+  background-color: rgb(121, 184, 26);
+  color: white;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsers {
+  padding: 20px 0;
+  padding-left: 3%;
+}
+
+/* styling usage section */
+.usage {
+  margin-top: 3%;
+  width: 80%;
+  padding: 3% 3%;
+  /* border: 2px solid black; */
+}
+
+.usage-heading {
+  font-size: 3em;
+  padding: 0;
+  /* margin-bottom: -0px; */
+}
+.usage-child {
+  width: 80%;
+  height: 30px;
+  margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  background-color: #ddd;
+
+}
+/* styling parameter section */
+.parameters{
+  height:auto;
+  width: 80%;
+  padding: 3% 3%;
+  font-size: 13px;
+  /* border: 2px solid black; */
+}
+
+.parameter-heading{
+  font-size: 3em;
+  padding: 0;
+}
+
+/* styling table and and its elements */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #e6e6e6e1;
+}
+tr:hover {
+  background-color: #e6e6e6e1;
+}
+.optional button{
+  color: white;
+  border: none;
+  background-color: rgb(112, 176, 47);
+  font-weight: bold;
+};
+
+
+/* styling example section */
+.examples-container{
+  width: 80%;
+  height: auto;
+  /* border: 2px solid black; */
+}
+
+.examples{
+  height: auto;
+  width: 80%;
+  padding: 3% 3%;
+  margin-bottom: 3%;
+  /* border: 2px solid black; */
+}
+
+.example-heading{
+  font-size: 3em;
+  padding: 0;
+}
+
+.example-child{
+  width: 100%;
+  height: auto;
+  padding: 0.5% 0 0 2%;
+  background-color: #f0f0f0d5;
+  border:2px solid #c1c1c1;
+  margin-bottom:2%;
+}
+
+/* styling  form and its elements */
+form{
+  width: 100%;
+  height:100px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.examples form input{
+ height: 35px;
+ width: 15%;
+ margin-right: 3%;
+}
+.examples form label{
+ margin-right:5px;
+}
+
+.examples form select{
+
+ height: 35px;
+ width: 15%;
+ margin-right: 3%;
+ 
+}
+.examples form select option{
+  height: 20px;
+
+}
+.search-btn{
+  height: 35px;
+  width: 8%;
+  background-color: rgb(19, 155, 197);
+  border: none;
+  margin-right:5px;
+}
+
+.reset-btn{
+  height: 35px;
+  width: 8%;
+  background-color: rgba(220, 220, 220, 0.998);
+  border: none;
+}
+
+/* styling change-log section */
+.change-log{
+  width: 80%;
+  padding: 3% 3%;
+  margin-bottom: 2%;
+  /* border: 2px solid black; */
+}
+
+.change-log-title{
+  font-size: 3em;
+  padding: 0;
+}
+
+
+/* styling imporatant links section */
+.important-links{
+  width: 80%;
+  padding: 3% 3%;
+  padding: 5px 3%;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+}
+
+.important-links-child{
+        width: 12%;
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid black; */
+}
+
+/* styling license section */
+.license{
+  width: 80%;
+  padding: 0 3%;
+  /* border: 2px solid black; */
+  
+}
